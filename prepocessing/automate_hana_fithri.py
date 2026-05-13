@@ -140,29 +140,14 @@ print("Split data selesai")
 
 """# **11. Save Output**"""
 
-OUTPUT_DIR = "simnangkis_preprocessing"
+OUTPUT_DIR = "simnangkis_eksport_mlati_preprocessing"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-X_train.to_csv(
-    os.path.join(OUTPUT_DIR, "X_train.csv"),
+df.to_csv(
+    os.path.join(OUTPUT_DIR, "clean_data.csv"),
     index=False
 )
 
-X_test.to_csv(
-    os.path.join(OUTPUT_DIR, "X_test.csv"),
-    index=False
-)
-
-y_train.to_csv(
-    os.path.join(OUTPUT_DIR, "y_train.csv"),
-    index=False
-)
-
-y_test.to_csv(
-    os.path.join(OUTPUT_DIR, "y_test.csv"),
-    index=False
-)
-
-print("Dataset preprocessing berhasil disimpan")
+print("Clean dataset berhasil disimpan")
 
